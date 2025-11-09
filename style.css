@@ -1,0 +1,167 @@
+:root {
+    --bg: #ffffff;
+    --fg: #000000;
+    --muted: #93a1b1;
+    --accent: #DDFF00;
+    --button-bg: #ffffff;
+    --button-fg: #000000;
+    --button-border: #000000;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  @font-face {
+    font-family: "Fixedsys Excelsior";
+    src: url("fonts/fsex-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: "Fixedsys Excelsior", monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .wrap {
+    width: min(920px, 90vw);
+    text-align: center;
+    padding: 24px;
+  }
+  #line {
+    font-size: clamp(20px, 4vw, 44px);
+    line-height: 1;
+    letter-spacing: 0.3px;
+    opacity: 0;
+    will-change: opacity;
+  }
+  .fade-in {
+    animation: fadeIn var(--fade, 800ms) ease forwards;
+  }
+  .fade-out {
+    animation: fadeOut var(--fade, 800ms) ease forwards;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      filter: blur(2px);
+    }
+    to {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      filter: blur(0);
+    }
+    to {
+      opacity: 0;
+      filter: blur(2px);
+    }
+  }
+
+  #cta {
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    opacity: 0;
+    transition: opacity .35s ease;
+    will-change: opacity;
+  }
+  .btn {
+    display: block;
+    width: min(420px, 90vw);
+    padding: 14px 18px;
+    background: var(--button-bg);
+    border:1px solid var(--button-border);
+    color: var(--button-fg);
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: transform 0.08s ease, border-color 0.2s ease,
+      background 0.2s ease, color 0.2s ease;
+    user-select: none;
+  }
+  .btn:hover {
+    transform: translateY(-1px);
+    border-color: #3a4458;
+  }
+  .btn:active {
+    transform: translateY(0);
+  }
+  .btn.primary {
+    color: #0b0e12;
+    background: var(--accent);
+    font-family: "Fixedsys Excelsior", monospace;
+  }
+  .note {
+    margin-bottom: 18px;
+    font-size: 22px;
+    font-weight: 400;
+  }
+
+  #cta.show { opacity: 1; }
+
+  /* ——— Mobile & small screens ——— */
+
+body{
+  padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0)
+           env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0);
+  touch-action: manipulation;
+}
+
+@media (max-width: 768px){
+  .wrap{ width: 94vw; padding: 16px; }
+  #line{
+    font-size: clamp(18px, 4.8vw, 34px);
+    line-height: 1.25;
+    letter-spacing: 0.2px;
+    padding: 0 2px;
+  }
+  #cta{ gap: 10px; }
+  .btn{
+    width: 100%;
+    font-size: 16px;
+    padding: 14px 16px;
+    border-radius: 12px;
+  }
+  .note{ font-size: 18px; }
+}
+
+@media (max-width: 480px){
+  .wrap{ width: 94vw; padding: 14px; }
+  #line{
+    font-size: clamp(17px, 6.2vw, 28px);
+    line-height: 1.32;
+    letter-spacing: 0.15px;
+    padding: 0 2px;
+  }
+  #cta{ gap: 8px; }
+  .btn{
+    width: 100%;
+    font-size: 15px;
+    padding: 14px 14px;
+    border-radius: 12px;
+  }
+  .note{ font-size: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .fade-in, .fade-out{
+    animation: none !important;
+  }
+  #cta{
+    transition: none !important;
+  }
+}

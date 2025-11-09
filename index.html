@@ -1,11 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ty</title>
-</head>
-<body>
-    <h1>Thank you</h1>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>echo — thank you</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.svg" type="image/x-icon">
+  </head>
+  <body>
+    <main class="wrap">
+      <div id="line" aria-live="polite" aria-atomic="true"></div>
+
+      <div id="cta" role="group" aria-label="echo links">
+        <div class="note">
+          <a href="https://www.twitch.tv/n0de21" target="_blank">
+            <img src="logo.svg" alt="n0de21 Logo" />
+          </a>
+        </div>
+        <a class="btn" href="https://www.twitch.tv/n0de21" target="_blank" rel="noopener">Twitch</a>
+        <a class="btn" href="https://www.youtube.com/@n0de21sync" target="_blank" rel="noopener">YouTube</a>
+        <a class="btn" href="https://www.instagram.com/n0de21/" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn" href="https://www.tiktok.com/@n0de21" target="_blank" rel="noopener">Tiktok</a>
+        <a class="btn" href="https://n0de21.github.io/lore-site/" target="_blank" rel="noopener">Lore</a>
+        <button class="btn primary" id="restart">Start over</button>
+      </div>
+    </main>
+    <script src="script.js"></script> 
+  </body>
 </html>
