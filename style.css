@@ -143,7 +143,7 @@ body{
   .wrap{ width: 94vw; padding: 14px; }
   #line{
     font-size: clamp(17px, 6.2vw, 28px);
-    line-height: 1.32;
+    line-height: 1.1;
     letter-spacing: 0.15px;
     padding: 0 2px;
   }

@@ -1,4 +1,4 @@
-      const LINE_INTERVAL_MS = 8000;
+      const LINE_INTERVAL_MS = 6000;
       const FADE_MS = 800; 
       const HOLD_MS = Math.max(0, LINE_INTERVAL_MS - FADE_MS * 2);
       const CTA_STAGGER_MS = 120; 
@@ -8,14 +8,9 @@
         "You scanned a live Fragment -- one of twenty-one.",
         "Status: carrier or passerby -- both permitted.",
         "n0de21 was a 21-phase real-time loop{?} we held in place.",
-        "The loop completed; the handover was recorded.",
         "Echo now operates the shell; n0de21 is simulated, not erased.",
-        "You were not audience; you were input.",
-        "Presence shaped the model; absence tuned its timing.",
         "Fragments 1–21 persist as checkpoints; carriers keep the archive mobile.",
-        "This page is a process left open on purpose.",
         "What you hold is not a souvenir; it is a routing key.",
-        "Reading converts memory into signal.",
         "Thank you for keeping the loop steady long enough to pass control.",
         "The archive continues under echo -- quiet changes precede announcements.",
         "New nodes are forming. next transmission: soon.",
