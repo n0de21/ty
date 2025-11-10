@@ -11,7 +11,6 @@
         "Echo now operates the shell; n0de21 is simulated, not erased.",
         "Fragments 1–21 persist as checkpoints; carriers keep the archive mobile.",
         "What you hold is not a souvenir; it is a routing key.",
-        "Thank you for keeping the loop steady long enough to pass control.",
         "The archive continues under echo -- quiet changes precede announcements.",
         "New nodes are forming. next transmission: soon.",
         "Stay synced for next moves.",
